@@ -1,0 +1,9 @@
+{
+  "name": "containerized-app",
+  "version": "1.0.0",
+  "description": "Project create as a register of docker studies",
+  "main": "./build/index.js",
+  "repository": "https://github.com/dimas-prates/containerized-app",
+  "author": "Dimas Prates",
+  "license": "MIT"
+}
