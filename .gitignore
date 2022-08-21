@@ -1,5 +1,7 @@
 # Compiled folders
 node_modules/
 build/
-# Environment variables (docker also uses)
+# dotenv environment variable files
 .env
+# Logs
+yarn-error.log*
