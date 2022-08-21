@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  node-app-prod:
+    container_name: node-app-api-prd
+    image: node-app-api-production:1.0.0
+    restart: unless-stopped
+    build:
+      context: .
+      target: production
+      dockerfile: ./dockerfile
+    volumes:
+      - .:/opt/app
+    network_mode: host
+
+  node-app-dev:
+    container_name: node-app-api-dev
+    image: node-app-api-development:1.0.0
+    restart: unless-stopped
+    build:
+      context: .
+      target: development
+      dockerfile: ./dockerfile
+    volumes:
+      - .:/opt/app
+    network_mode: host
