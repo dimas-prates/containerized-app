@@ -1,7 +1,10 @@
 # Compiled folders
-node_modules/
+node_modules
+dist/
 build/
 # dotenv environment variable files
 .env
 # Logs
+yarn-debug.log*
 yarn-error.log*
+tsconfig.tsbuildinfo
