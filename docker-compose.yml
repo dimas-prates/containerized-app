@@ -1,18 +1,6 @@
-version: "3.8"
+version: "3.7"
 
 services:
-  node-app-prod:
-    container_name: node-app-api-prd
-    image: node-app-api-production:1.0.0
-    restart: unless-stopped
-    build:
-      context: .
-      target: production
-      dockerfile: ./dockerfile
-    volumes:
-      - .:/opt/app
-    network_mode: host
-
   node-app-dev:
     container_name: node-app-api-dev
     image: node-app-api-development:1.0.0
@@ -20,7 +8,24 @@ services:
     build:
       context: .
       target: development
-      dockerfile: ./dockerfile
+      dockerfile: ./Dockerfile
     volumes:
       - .:/opt/app
-    network_mode: host
+      - /opt/app/node_modules
+    ports:
+      - 5006:${PORT}
+
+  node-app-prod:
+    container_name: node-app-api-prd
+    image: node-app-api-production:1.0.0
+    restart: unless-stopped
+    build:
+      context: .
+      target: production
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/opt/app
+      - /opt/app/node_modules
+      - /opt/app/build
+    ports:
+      - 5005:${PORT}
