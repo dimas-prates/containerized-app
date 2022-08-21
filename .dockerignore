@@ -4,7 +4,11 @@ build/
 #Files samples
 .env.sample
 # Version Control
+.gitignore
 .git/
 #Markdown files
 *.md
 !README*.md
+#Heroku files
+Procfile
+.slugignore
