@@ -13,7 +13,7 @@ services:
       - .:/opt/app
       - /opt/app/node_modules
     ports:
-      - 5006:${PORT}
+      - 5001:${PORT}
 
   node-app-prod:
     container_name: node-app-api-prd
@@ -28,4 +28,4 @@ services:
       - /opt/app/node_modules
       - /opt/app/build
     ports:
-      - 5005:${PORT}
+      - 5000:${PORT}
