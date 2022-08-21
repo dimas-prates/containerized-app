@@ -1,6 +1,11 @@
 # Compiled folders
-node_modules/
+node_modules
+dist/
 build/
+# Logs
+yarn-debug.log*
+yarn-error.log*
+tsconfig.tsbuildinfo
 #Files samples
 .env.sample
 # Version Control
