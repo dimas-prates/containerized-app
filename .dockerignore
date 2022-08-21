@@ -1,6 +1,8 @@
 # Compiled folders
 node_modules/
 build/
+#Files samples
+.env.sample
 # Version Control
 .git/
 #Markdown files
