@@ -1,5 +1,5 @@
 # Compiled folders
 node_modules/
 build/
-# Application purposes
+# Environment variables (docker also uses)
 .env

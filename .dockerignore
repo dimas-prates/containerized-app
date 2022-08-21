@@ -1,2 +1,8 @@
+# Compiled folders
 node_modules/
 build/
+# Version Control
+.git/
+#Markdown files
+*.md
+!README*.md
