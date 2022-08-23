@@ -1,9 +1,9 @@
 version: "3.7"
 
 services:
-  node-app-dev:
-    container_name: node-app-api-dev
-    image: node-app-api-development:1.0.0
+  development-app:
+    container_name: ${APP_NAME}-dev
+    image: ${APP_NAME}-development:${APP_VERSION}
     restart: unless-stopped
     build:
       context: .
@@ -15,9 +15,9 @@ services:
     ports:
       - 5001:${PORT}
 
-  node-app-prod:
-    container_name: node-app-api-prd
-    image: node-app-api-production:1.0.0
+  production-app:
+    container_name: ${APP_NAME}-prd
+    image: ${APP_NAME}-production:${APP_VERSION}
     restart: unless-stopped
     build:
       context: .
