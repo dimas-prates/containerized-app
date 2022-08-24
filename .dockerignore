@@ -1,5 +1,5 @@
 # Compiled folders
-node_modules
+node_modules/
 dist/
 build/
 # Logs
@@ -17,3 +17,7 @@ tsconfig.tsbuildinfo
 #Heroku files
 Procfile
 .slugignore
+#Linting
+.eslintignore
+.eslintrc.json
+.editorconfig
