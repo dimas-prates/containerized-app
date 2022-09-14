@@ -27,7 +27,9 @@
 		"commitizen": "^4.2.5",
 		"commitlint": "^17.1.2",
 		"commitlint-config-gitmoji": "^2.2.5",
+		"cz-conventional-changelog": "3.3.0",
 		"cz-customizable": "7.0.0",
+		"cz-emoji": "1.3.2-canary.2",
 		"eslint": "^8.22.0",
 		"husky": "^8.0.1",
 		"jest": "^28.1.3",
@@ -45,7 +47,44 @@
 	},
 	"config": {
 		"commitizen": {
-			"path": "./node_modules/cz-customizable"
+			"path": "./node_modules/cz-conventional-changelog",
+			"types": {
+				":sparkles: feat": {
+					"description": "A new feature",
+					"title": "Features"
+				},
+				":adhesive_bandage: fix": {
+					"description": "A bug fix"
+				},
+				":memo: doc": {
+					"description": "Documentation only changes"
+				},
+				":pencil2: style": {
+					"description": "Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)"
+				},
+				":recycle: refactor": {
+					"description": "A code change that neither fixes a bug nor adds a feature"
+				},
+				":zap: perf": {
+					"description": "A code change that improves performance"
+				},
+				":test_tube: test": {
+					"description": "Adding missing tests or correcting existing tests"
+				},
+				":package: build": {
+					"description": "Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)"
+				},
+				":bricks: ci": {
+					"description": "Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)"
+				},
+				":wrench: chore": {
+					"description": "Other changes that don't modify src or test files"
+				},
+				":rewind: revert": {
+					"description": "Reverts a previous commit",
+					"prefix": "tsdts"
+				}
+			}
 		}
 	}
 }
