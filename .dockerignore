@@ -21,3 +21,6 @@ Procfile
 .eslintignore
 .eslintrc.json
 .editorconfig
+commitlint.config.ts
+# Hooks
+.husky/
