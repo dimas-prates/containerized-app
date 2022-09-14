@@ -13,6 +13,15 @@ app.use(morgan("dev"));
 app.use(cors());
 app.use(express.json());
 app.get("/", (req, res) => { res.status(200).json({ message: `Application running on ${protocol}://${req.hostname}:${port}` }); });
+app.get("/healthcheck", (req, res) => {
+	const healthCheck = {
+		uptime: process.uptime(),
+		responseTime: process.hrtime(),
+		message: "OK",
+		timeStamp: Date.now()
+	};
+	return res.status(200).json(healthCheck);
+});
 
 const server = app.listen(port, () => { console.log(`\nApplication running on ${protocol}://${address()}:${port}\n`); });
 
